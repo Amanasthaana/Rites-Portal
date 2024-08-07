@@ -1,1 +1,2 @@
-#Rites-Portal
+# RITES
+RITES

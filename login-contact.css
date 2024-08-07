@@ -1,0 +1,110 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Container Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light grey background for the whole page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Hide scrollbar */
+}
+
+/* Page Container for centering */
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #fff; /* White background for the page content */
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Larger shadow for more depth */
+    border-radius: 15px; /* More rounded corners */
+    transform: scale(0.95);
+    animation: zoomIn 1s forwards, fadeIn 1s ease-out; /* Combined animations */
+}
+
+/* Form Container Styles */
+.form-container {
+    width: 100%;
+    max-width: 400px; /* Maximum width for the form container */
+    text-align: center;
+    transform: translateY(20px);
+    animation: slideUp 0.8s forwards; /* Animation for sliding up */
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2em;
+    animation: fadeInText 1s ease-out; /* Fade-in animation for heading */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+    font-size: 1.1em;
+}
+
+input, textarea {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #5cb85c;
+    outline: none;
+}
+
+button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #4cae4c;
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); }
+    to { transform: scale(1); }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInText {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

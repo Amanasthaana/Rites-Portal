@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RITES</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1><img src="https://tse1.mm.bing.net/th?id=OIP.sFZ60oyNacuTQrHuNK4q4gHaCi&pid=Api&P=0&h=180" alt="RITES Logo"></h1>
+        <div id="moving-text">Rail India Technical And Economic Services</div>
+        <nav>
+            <ul>
+                <li><a href="#" id="home" class="btn">Home</a></li>
+                <li><a href="login.html" target="_blank" class="btn">Login</a></li>
+                <li><a href="contact.html" target="_blank" class="btn">Contact Us</a></li>
+                <li><a href="#" id="upload" class="btn">Upload Documents</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Image Slider -->
+    <div class="slider">
+        <div class="slides">
+            <div class="slide fade">
+                <img src="Images/1st.jpeg" alt="Slide 1">
+            </div>
+            <div class="slide fade">
+                <img src="Images/2nd.jpeg" alt="Slide 2">
+            </div>
+            <div class="slide fade">
+                <img src="Images/3rd.jpeg" alt="Slide 3">
+            </div>
+            <div class="slide fade">
+                <img src="Images/4th.jpeg" alt="Slide 4">
+            </div>
+        </div>
+        <!-- Navigation Dots -->
+        <div class="nav-dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <main>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/officialritesltd" target="_blank">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.OIsjsujhlG7WR2Pmmxw9TAHaHa&pid=Api&P=0&h=180" alt="Facebook">
+            </a>
+            <a href="https://www.youtube.com/@RITESLtd" target="_blank">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.B_r07_-I0vymiISetHlwuAHaFL&pid=Api&P=0&h=180" alt="YouTube">
+            </a>
+            <a href="https://www.instagram.com/ritesltdindia/" target="_blank">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.JtmXSh_uyZBaTg1eXd-NtgHaHa&pid=Api&P=0&h=180" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com/company/rites-limited/" target="_blank">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.DgVNhFcvWWSCxJpVWsry4wHaHV&pid=Api&P=0&h=180" alt="LinkedIn">
+            </a>
+            <a href="https://www.rites.com" target="_blank">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.-ZSitWzSO_Y26R7-c8xhIQHaHa&pid=Api&P=0&h=180" alt="Google">
+            </a>
+        </div>
+
+        <!-- Footer with HR Portal Options -->
+        <footer id="main-footer">
+            <div class="footer-content">
+                <ul>
+                    <li><a href="faq.html" target="_blank">FAQ</a></li>
+                    <li><a href="refund-policy.html" target="_blank">Refund Policy</a></li>
+                    <li><a href="terms-of-use.html" target="_blank">Terms of Use</a></li>
+                    <li><a href="copyright-of-2024.html" target="_blank">Copyright 2024 | Rites</a></li>
+                </ul>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Modal Structure -->
+    <div id="uploadModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Upload Document</h2>
+            <form class="upload-form" action="/upload" method="POST" enctype="multipart/form-data">
+                <input type="file" name="document" required>
+                <button type="submit" class="btn">Upload</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="background-overlay"></div>
+</body>
+</html>
