@@ -1,0 +1,232 @@
+.dropDownProfile {
+  position: absolute;
+  top: 5rem;
+  right: 3.8rem;
+  width: 24rem;
+  border-radius: 12px; /* Slightly reduce border-radius for a sharper look */
+  border: 1px solid #e0e0e0; /* Use a lighter border color for a modern feel */
+  background-color: #fff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Increase shadow for better depth */
+  cursor: pointer;
+  height: 20rem;
+  overflow-y: auto; /* Enable scrolling for longer content */
+  z-index: 1000; /* Ensure it stays on top */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transitions */
+  transform-origin: top right;
+  transform: scale(0.95);
+  opacity: 0;
+  pointer-events: none;
+  padding: 15px; /* Add padding for content spacing */
+}
+
+.dropDownProfile.show {
+  transform: scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dropDownProfile::before {
+  content: '';
+  position: absolute;
+  top: -0.7rem;
+  right: 3rem;
+  width: 18px;
+  height: 18px;
+  transform: rotate(45deg);
+  background-color: #fff;
+  border-left: 1px solid #e0e0e0; /* Match the border color */
+  border-top: 1px solid #e0e0e0;
+  box-shadow: -3px -3px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for arrow */
+}
+
+.dropDownProfile ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropDownProfile li {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px; /* Adjust padding for better spacing */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+  border-radius: 8px; /* Rounded corners for list items */
+}
+
+.dropDownProfile li:hover {
+  background-color: #f8f9fa; /* Slightly darker hover background */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.dropDownProfile input[type="checkbox"] {
+  margin-right: 12px;
+  accent-color: #007BFF; /* Custom checkbox color */
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+
+.dropDownProfile label {
+  font-size: 16px;
+  color: #444; /* Slightly darker text color for better readability */
+  cursor: pointer;
+  user-select: none; /* Prevent text selection */
+}
+
+.dropDownProfile label:hover {
+  color: #000; /* Darken text on hover for better interaction feedback */
+}
+
+.dropDownProfile::-webkit-scrollbar {
+  width: 6px; /* Custom scrollbar width */
+}
+
+.dropDownProfile::-webkit-scrollbar-thumb {
+  background-color: #c0c0c0; /* Custom scrollbar thumb color */
+  border-radius: 10px; /* Rounded scrollbar thumb */
+}
+
+.dropDownProfile::-webkit-scrollbar-track {
+  background-color: #f0f0f0; /* Custom scrollbar track color */
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+  .dropDownProfile {
+    right: 1rem;
+    width: 90%;
+    top: 4rem;
+  }
+  
+  .dropDownProfile::before {
+    right: 1.5rem;
+  }
+}
+
+/* Subtle animations for dropdown appearance */
+.dropDownProfile.show {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* Social Icons */
+.social-icons {
+  position: fixed;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000; /* Ensure it's above other content */
+  padding: 8px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.9); /* Light semi-transparent background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a clean look */
+}
+
+.social-icons a {
+  margin: 12px 0;
+  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 36px; /* Moderate size for professionalism */
+  height: 36px;
+  display: block;
+  opacity: 0.9; /* Slightly opaque for a refined look */
+  border-radius: 50%; /* Circular icons for modern appeal */
+  border: 2px solid transparent; /* Clean border transition on hover */
+  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.15); /* Slight zoom effect on hover */
+  opacity: 1; /* Full opacity on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover for emphasis */
+  border-color: #007bff; /* Professional blue border on hover */
+}
+
+.social-icons a:focus img {
+  outline: none;
+  border-color: #007bff; /* Consistent border color for focus state */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Focus shadow for accessibility */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .social-icons {
+    right: 10px; /* Adjust position for smaller screens */
+    padding: 6px;
+    border-radius: 10px;
+  }
+
+  .social-icons img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* Accessibility Enhancement */
+.social-icons a {
+  text-decoration: none; /* Remove underline from links */
+}
+
+.social-icons a::before {
+  content: attr(aria-label); /* Use aria-label as the content for screen readers */
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+/* Footer */
+#main-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  border-top: 2px solid #fff;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-content ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.footer-content ul li a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+.footer-content ul li a:hover {
+  color: #5cb85c;
+}
+
+

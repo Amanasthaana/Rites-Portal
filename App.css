@@ -1,0 +1,140 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa; /* Light background */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* App Container */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Ensure it covers the full viewport height */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Header Styles */
+.App-header {
+  width: 100%;
+  background: linear-gradient(135deg, #1f4037, #99f2c8);
+  padding: 15px 20px;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add slight shadow for depth */
+  overflow: hidden; /* Ensure header content stays within the header */
+}
+
+.App-header img {
+  height: 40px;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+
+.App-header h1 {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: white;
+  margin: 0;
+  vertical-align: middle;
+  font-weight: 700;
+}
+
+/* Form Container Styles */
+.form-container {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  margin: 20px 0;
+  overflow: hidden; /* Prevent content overflow */
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container select, .form-container input {
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-container select:focus, .form-container input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.form-container button {
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-container button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Fullscreen Layout */
+.fullscreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .form-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .App-header h1 {
+    font-size: 1.25rem;
+  }
+
+  .form-container select, .form-container input, .form-container button {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .App-header img {
+    height: 30px;
+  }
+
+  .App-header h1 {
+    font-size: 1rem;
+  }
+
+  .form-container {
+    padding: 15px;
+  }
+
+  .form-container select, .form-container input, .form-container button {
+    font-size: 0.8rem;
+  }
+}
